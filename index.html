@@ -201,6 +201,53 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between}
   .addrow{grid-template-columns:1fr 1fr}
   .addrow button{grid-column:1/-1}
 }
+
+.hero .wrap>*,.datos>*,.grid2>*,.grid3>*,.kit>*,.vs>*,.hvs>*{min-width:0}
+@media (max-width:900px){.hero .wrap,.datos,.kit{grid-template-columns:minmax(0,1fr)}.grid3{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:640px){
+  html{scroll-padding-top:64px}
+  body{font-size:15px;line-height:1.5}
+  .wrap{padding-left:max(14px,env(safe-area-inset-left));padding-right:max(14px,env(safe-area-inset-right))}
+  .top .wrap{height:52px}
+  .marca b{font-size:18px;padding:2px 7px}
+  .nav{gap:0}.nav a{font-size:13px;padding:6px 8px}
+  .hero{padding:22px 0 26px}
+  .hero .wrap{gap:22px}
+  .kicker{font-size:11px;margin-bottom:10px}
+  .hero h1{font-size:44px}
+  .hero p.lead{font-size:16px;margin:14px 0 18px}
+  .btn{padding:12px 16px;font-size:15px;border-radius:12px}
+  .btns .btn{flex:1;justify-content:center}
+  .chips{margin-top:16px;gap:6px;font-size:12px}.chips span{padding:4px 9px}
+  .ficha{padding:16px;border-radius:20px}.ficha .q{font-size:15px}.ficha .campo{min-height:0;padding:9px 11px;font-size:14px;margin-bottom:12px}
+  .estampa{font-size:20px;border-width:4px;padding:2px 9px}.estampa.no{top:44px;right:-6px}.estampa.si{right:-4px;bottom:10px}
+  section.bloque{padding:34px 0}
+  .cab{margin-bottom:16px}.cab h2{font-size:32px}.cab p{font-size:15px;margin-top:8px}
+  .num{font-size:12px;margin-bottom:6px}
+  .tarjeta{padding:16px;border-radius:14px}
+  .tarjeta h3{font-size:24px!important}
+  .panel h3{font-size:24px}
+  .seg span{padding:8px 6px;font-size:13px;border-radius:10px}.seg label{min-width:0}
+  .f{gap:8px}.f label{font-size:13px}.f input,.f select{padding:8px 9px;font-size:15px;border-radius:9px}
+  .buscar input{padding:11px 13px;font-size:15px;border-radius:12px}
+  .cats{gap:6px}.cats button{padding:6px 11px;font-size:13px}
+  .preg{padding:14px 14px 10px;border-radius:13px;margin-bottom:10px}
+  .preg .p{font-size:15px;margin-bottom:6px}.preg .r{font-size:15px;padding:9px 10px}.preg .t{font-size:13px}
+  .copiar{padding:7px 12px;font-size:13px}
+  .dice{padding:10px 12px;font-size:15px}
+  ol.pasos li{padding:8px 0;gap:10px}ol.pasos li::before{width:28px;height:28px;font-size:15px}
+  .anillo{width:66px;height:66px}
+  .mini .sel{font-size:15px;border-width:3px}
+  pre.prompt{font-size:14px;padding:11px}
+  .tabla{font-size:13px}.tabla th,.tabla td{padding:7px 5px}
+  .check label{padding:9px 0;font-size:15px}.check input{width:21px;height:21px}
+  .alerta li{padding:9px 0;gap:10px}.alerta li::before{width:26px;height:26px;font-size:16px}
+  .calc{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.calc label{font-size:13px}.calc label:last-child{grid-column:1/-1}
+  .res b{font-size:28px}
+  .semana div,.horas div{font-size:15px;padding:9px 0}
+  .kit{padding:20px;border-radius:20px;gap:16px}.kit h2{font-size:30px}
+  footer{padding:26px 0 calc(26px + env(safe-area-inset-bottom));font-size:13px}
+}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
