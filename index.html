@@ -3,280 +3,668 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Respuestas listas para copiar en las preguntas de selección de Computrabajo y otros portales. Gratis, de Te Llaman.">
-<meta property="og:title" content="¿Qué contesto? · Te Llaman">
-<meta property="og:description" content="Respuestas listas para copiar en tus postulaciones de empleo. Gratis.">
-<style>body{margin:0}</style>
+<title>Te Llaman · Respuestas para que te llamen</title>
+<meta name="description" content="Más de 60 respuestas listas para copiar en los formularios de empleo, guía de entrevista, hoja de vida y checklist. Gratis, para primer empleo y temporada en Colombia.">
+<meta property="og:title" content="Te Llaman · Respuestas para que te llamen">
+<meta property="og:description" content="Llena tus datos una vez y copia tus respuestas para Computrabajo, elempleo y Magneto. Gratis.">
+<meta name="theme-color" content="#16264a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500;62..125,700;62..125,800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
+<style>
+:root{
+  --papel:#f5f7fa; --hoja:#ffffff; --tinta:#16264a; --tinta2:#3a4a6b; --gris:#56627c; --linea:#d5dbe6; --suave:#eef2f8;
+  --sello:#5b3fc0; --lila:#c9bdf5; --lila2:#efeafd; --rojo:#c93434; --rojo2:#fdecec; --verde:#14845a; --verde2:#e3f5ec; --ambar:#ffd166;
+  --sombra:0 1px 0 rgba(22,38,74,.06),0 10px 30px -12px rgba(22,38,74,.25);
+  --r:18px; color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root{
+  --papel:#0f1a33; --hoja:#16264a; --tinta:#eef2fa; --tinta2:#c6cfe2; --gris:#9aa6c2; --linea:#2c3d63; --suave:#1c2d52;
+  --sello:#a995f0; --lila:#c9bdf5; --lila2:#262f5c; --rojo:#ff7b7b; --rojo2:#3a2033; --verde:#5fd3a2; --verde2:#173a3a; --ambar:#ffd166;
+  --sombra:0 1px 0 rgba(0,0,0,.2),0 14px 34px -14px rgba(0,0,0,.6); color-scheme:dark;}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--papel);color:var(--tinta);font:400 17px/1.55 'Atkinson Hyperlegible',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Archivo',system-ui,sans-serif;font-stretch:72%;font-weight:800;line-height:1;margin:0;text-wrap:balance;letter-spacing:-.3px}
+a{color:var(--sello)}
+button,input,select,textarea{font:inherit;color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left));padding-right:max(18px,env(safe-area-inset-right))}
+
+/* barra superior */
+.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--papel) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--linea)}
+.top .wrap{display:flex;align-items:center;gap:18px;height:64px}
+.marca{display:inline-flex;align-items:center;text-decoration:none;color:var(--tinta);flex:none}
+.marca b{border:3px solid var(--sello);color:var(--sello);border-radius:8px;padding:2px 9px 3px;font:800 22px/1 'Archivo';font-stretch:68%;transform:rotate(-4deg);display:inline-block}
+.nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;flex:1;justify-content:flex-end}
+.nav::-webkit-scrollbar{display:none}
+.nav a{white-space:nowrap;text-decoration:none;color:var(--tinta2);font-weight:700;font-size:15px;padding:8px 12px;border-radius:999px}
+.nav a:hover,.nav a.on{background:var(--lila2);color:var(--sello)}
+
+/* portada */
+.hero{padding:56px 0 40px}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.kicker{display:inline-block;font:700 14px 'Atkinson Hyperlegible';letter-spacing:.06em;text-transform:uppercase;color:var(--sello);margin-bottom:16px}
+.hero h1{font-size:clamp(46px,8vw,92px);line-height:.9}
+.hero h1 em{font-style:normal;color:var(--sello)}
+.hero p.lead{font-size:20px;color:var(--tinta2);max-width:34ch;margin:22px 0 28px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;border:0;border-radius:14px;padding:15px 22px;font-weight:700;font-size:17px;cursor:pointer;text-decoration:none;transition:transform .12s}
+.btn:active{transform:scale(.97)}
+.btn.p{background:var(--sello);color:#fff}
+.btn.s{background:var(--hoja);color:var(--tinta);box-shadow:inset 0 0 0 2px var(--linea)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px;color:var(--gris);font-size:15px}
+.chips span{background:var(--hoja);border:1px solid var(--linea);border-radius:999px;padding:6px 12px}
+.ficha{position:relative;background:var(--hoja);border-radius:28px;padding:28px;box-shadow:var(--sombra);transform:rotate(1.2deg)}
+.ficha .q{font-weight:700;font-size:17px;margin-bottom:10px}
+.ficha .campo{border:2px solid var(--linea);border-radius:12px;padding:12px 14px;min-height:76px;color:var(--tinta2);margin-bottom:16px}
+.ficha .campo.mal{text-decoration:line-through;text-decoration-color:var(--rojo);text-decoration-thickness:2px}
+.estampa{position:absolute;border:5px solid;border-radius:12px;padding:4px 14px;font:800 30px/1 'Archivo';font-stretch:70%;background:var(--hoja)}
+.estampa.no{color:var(--rojo);border-color:var(--rojo);right:-14px;top:70px;transform:rotate(-9deg)}
+.estampa.si{color:var(--verde);border-color:var(--verde);right:-10px;bottom:20px;transform:rotate(-6deg)}
+
+/* secciones */
+section.bloque{padding:64px 0;border-top:1px solid var(--linea)}
+.cab{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:16px;margin-bottom:28px}
+.cab h2{font-size:clamp(36px,5.5vw,58px)}
+.cab p{margin:10px 0 0;color:var(--tinta2);max-width:60ch}
+.num{font:800 15px 'Archivo';color:var(--sello);letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px;display:block}
+.tarjeta{background:var(--hoja);border-radius:var(--r);box-shadow:var(--sombra);padding:22px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.vid{display:inline-block;font:700 12px 'Atkinson Hyperlegible';color:var(--sello);background:var(--lila2);border-radius:999px;padding:3px 10px;margin-bottom:10px}
+
+/* datos */
+.datos{display:grid;grid-template-columns:340px minmax(0,1fr);gap:24px;align-items:start}
+.panel{position:sticky;top:84px}
+.panel h3{font-size:30px;margin-bottom:6px}
+.panel .ayuda{color:var(--gris);font-size:14px;margin:0 0 16px}
+.seg{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0 14px}
+.seg label{flex:1;min-width:120px}
+.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg span{display:block;text-align:center;padding:10px 8px;border-radius:12px;border:2px solid var(--linea);font-weight:700;font-size:14px;cursor:pointer}
+.seg input:checked+span{border-color:var(--sello);background:var(--lila2);color:var(--sello)}
+.seg input:focus-visible+span{outline:3px solid var(--lila)}
+.lbl{font-weight:700;font-size:14px;color:var(--tinta2);display:block;margin-top:2px}
+.f{display:grid;grid-template-columns:1fr 1fr;gap:10px 10px}
+.f .full{grid-column:1/-1}
+.f input,.f select{width:100%;margin-top:4px;background:var(--papel);border:2px solid var(--linea);border-radius:10px;padding:9px 11px;font-size:15px}
+.f input:focus,.f select:focus{outline:none;border-color:var(--sello)}
+details.mas{margin-top:12px}
+details.mas summary{cursor:pointer;font-weight:700;color:var(--sello);font-size:15px}
+.privado{margin-top:14px;font-size:13px;color:var(--gris);display:flex;gap:8px}
+.buscar{display:flex;gap:10px;align-items:center;margin-bottom:16px}
+.buscar input{flex:1;min-width:0;background:var(--hoja);border:2px solid var(--linea);border-radius:14px;padding:13px 16px;font-size:16px}
+.cats{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;margin-bottom:12px;scrollbar-width:thin}
+.cats button{flex:none;border:2px solid var(--linea);background:var(--hoja);border-radius:999px;padding:7px 14px;font-weight:700;font-size:14px;cursor:pointer}
+.cats button.on{border-color:var(--sello);background:var(--sello);color:#fff}
+.preg{background:var(--hoja);border-radius:16px;box-shadow:var(--sombra);padding:18px 18px 14px;margin-bottom:12px}
+.preg .p{font-weight:700;margin-bottom:8px}
+.preg .r{background:var(--suave);border-left:4px solid var(--sello);border-radius:8px;padding:10px 12px;white-space:pre-line}
+.preg .t{font-size:14px;color:var(--gris);margin-top:8px}
+.preg .pie{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:10px;flex-wrap:wrap}
+.copiar{border:0;background:var(--tinta);color:var(--papel);border-radius:10px;padding:8px 14px;font-weight:700;font-size:14px;cursor:pointer}
+.copiar.ok{background:var(--verde);color:#fff}
+.cnt{color:var(--gris);font-size:14px}
+.vacio{color:var(--gris);padding:20px;text-align:center}
+
+/* comparaciones */
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.lado{border-radius:14px;padding:16px;border:3px solid}
+.lado.no{border-color:var(--rojo);background:var(--rojo2)}
+.lado.si{border-color:var(--verde);background:var(--verde2)}
+.lado .tag{font:800 18px 'Archivo';font-stretch:72%}
+.lado.no .tag{color:var(--rojo)}.lado.si .tag{color:var(--verde)}
+ol.pasos{list-style:none;padding:0;margin:0;counter-reset:p}
+ol.pasos li{counter-increment:p;display:flex;gap:12px;padding:10px 0;border-top:1px solid var(--linea)}
+ol.pasos li:first-child{border-top:0}
+ol.pasos li::before{content:counter(p);flex:none;width:34px;height:34px;border-radius:50%;background:var(--sello);color:#fff;display:grid;place-items:center;font:800 18px 'Archivo'}
+.dice{background:var(--lila2);border-radius:14px 14px 14px 4px;padding:12px 14px;font-weight:700;margin:8px 0}
+.reloj{display:flex;align-items:center;gap:16px;margin-top:14px}
+.anillo{width:84px;height:84px;flex:none}
+.anillo circle{fill:none;stroke-width:9}
+.anillo .bg{stroke:var(--linea)}.anillo .fg{stroke:var(--sello);stroke-linecap:round;transform:rotate(-90deg);transform-origin:50% 50%;transition:stroke-dashoffset .25s linear}
+.anillo text{font:800 26px 'Archivo';fill:var(--tinta)}
+.hvs{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.mini{position:relative;aspect-ratio:3/4;background:#fff;border-radius:10px;box-shadow:var(--sombra);display:flex;overflow:hidden}
+.mini .col{width:34%;background:#2b3a67;padding:10% 6%}
+.mini .foto{width:56%;aspect-ratio:1;border-radius:50%;background:#c9bdf5;margin:0 auto 14%}
+.mini i{display:block;height:6px;border-radius:3px;background:#c3cbe0;margin:9% 0}
+.mini .b{height:7px;border-radius:4px;background:#4a5a88;margin:12% 0}.mini .b u{display:block;height:100%;width:70%;background:#ff7aa8;border-radius:4px}
+.mini .der{flex:1;padding:10% 8%}
+.mini .h{height:10px;border-radius:3px;margin:12% 0 7%}
+.mini .sel{position:absolute;right:6px;bottom:10px;font:800 20px 'Archivo';font-stretch:70%;border:4px solid;border-radius:9px;padding:1px 9px;transform:rotate(-8deg);background:#fff}
+pre.prompt{white-space:pre-wrap;background:var(--suave);border-radius:12px;padding:14px;font:400 15px/1.5 'Atkinson Hyperlegible';margin:10px 0}
+
+/* seguimiento y checklist */
+.check{list-style:none;padding:0;margin:0}
+.check li{border-top:1px solid var(--linea)}
+.check li:first-child{border-top:0}
+.check label{display:flex;gap:12px;align-items:center;padding:11px 0;cursor:pointer;font-weight:700}
+.check input{width:24px;height:24px;accent-color:var(--verde);flex:none}
+.check input:checked+span{text-decoration:line-through;color:var(--gris)}
+.barra-p{height:10px;border-radius:999px;background:var(--linea);overflow:hidden;margin:12px 0 4px}
+.barra-p u{display:block;height:100%;background:var(--verde);width:0;transition:width .3s}
+.tabla{width:100%;border-collapse:collapse;font-size:15px}
+.tabla th,.tabla td{text-align:left;padding:9px 8px;border-bottom:1px solid var(--linea);vertical-align:middle}
+.tabla th{font-size:13px;color:var(--gris);text-transform:uppercase;letter-spacing:.04em}
+.tabla select{border:1px solid var(--linea);border-radius:8px;background:var(--papel);padding:4px}
+.tabla .x{border:0;background:none;color:var(--rojo);font-weight:700;cursor:pointer;font-size:18px}
+.scroll{overflow-x:auto}
+.addrow{display:grid;grid-template-columns:1.2fr 1.2fr auto;gap:8px;margin-top:12px}
+.addrow input{min-width:0;background:var(--papel);border:2px solid var(--linea);border-radius:10px;padding:9px 11px}
+.horas{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-top:12px}
+.horas div{border-radius:10px;padding:10px 0;text-align:center;font:800 18px 'Archivo';background:var(--suave);color:var(--gris)}
+.horas div.si{background:var(--sello);color:#fff}
+.horas small{display:block;font:700 10px 'Atkinson Hyperlegible'}
+.alerta{list-style:none;padding:0;margin:0}
+.alerta li{display:flex;gap:12px;padding:12px 0;border-top:1px solid var(--linea)}
+.alerta li:first-child{border-top:0}
+.alerta li::before{content:"!";flex:none;width:32px;height:32px;border-radius:8px;background:var(--rojo);color:#fff;display:grid;place-items:center;font:800 20px 'Archivo'}
+.calc{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.calc label{font-weight:700;font-size:14px;color:var(--tinta2)}
+.calc input{width:100%;margin-top:4px;background:var(--papel);border:2px solid var(--linea);border-radius:10px;padding:9px 11px}
+.res{margin-top:16px;background:var(--lila2);border-radius:14px;padding:16px}
+.res b{font:800 34px 'Archivo';font-stretch:75%;color:var(--sello);display:block}
+.semana{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin:12px 0}
+.semana div{border-radius:10px;padding:12px 0;text-align:center;font:800 18px 'Archivo';background:var(--sello);color:#fff;position:relative}
+.semana div.d{background:var(--verde)}
+.semana div small{display:block;font:700 9px 'Atkinson Hyperlegible';opacity:.9}
+.semana .badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%) rotate(-6deg);background:var(--rojo);color:#fff;font:800 12px 'Archivo';padding:2px 6px;border-radius:6px;white-space:nowrap}
+
+/* cierre */
+.kit{background:var(--tinta);color:var(--papel);border-radius:28px;padding:40px;display:grid;grid-template-columns:1.3fr 1fr;gap:30px;align-items:center}
+@media (prefers-color-scheme:dark){.kit{background:var(--sello);color:#fff}}
+.kit h2{font-size:clamp(34px,5vw,54px)}
+.kit p{opacity:.88}
+.kit ul{margin:0;padding-left:20px}
+footer{padding:40px 0 calc(40px + env(safe-area-inset-bottom));color:var(--gris);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between}
+.toast{position:fixed;left:50%;bottom:calc(22px + env(safe-area-inset-bottom));transform:translateX(-50%) translateY(120px);background:var(--tinta);color:var(--papel);padding:12px 18px;border-radius:12px;font-weight:700;transition:transform .25s;z-index:50}
+.toast.ver{transform:translateX(-50%) translateY(0)}
+
+@media (max-width:900px){
+  .hero .wrap,.datos,.kit{grid-template-columns:1fr}
+  .panel{position:static}
+  .grid3{grid-template-columns:1fr}
+  .hero{padding-top:32px}
+  .ficha{transform:none;margin:0 6px}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .top .wrap{height:58px;gap:10px}
+  .nav a{font-size:14px;padding:7px 10px}
+  .grid2,.vs,.hvs{grid-template-columns:1fr}
+  .calc{grid-template-columns:1fr 1fr}
+  section.bloque{padding:46px 0}
+  .tarjeta{padding:18px}
+  .kit{padding:26px}
+  .addrow{grid-template-columns:1fr 1fr}
+  .addrow button{grid-column:1/-1}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
 </head>
 <body>
-<title>¿Qué contesto?</title>
-<meta name="claude:viewport-fit-sides" content="cover">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500;62..125,800&family=Atkinson+Hyperlegible:wght@400;700&display=swap">
-<style>
-/* Concepto: un formulario de selección impreso. A la izquierda llenas tus datos (fijo en escritorio);
-   a la derecha, cada pregunta es una línea del formulario con su respuesta en un campo.
-   Lo único llamativo: el sello morado de notaría que se estampa al copiar. Todo alineado a la izquierda. */
-:root{
-  --paper:#f5f7fa;      /* papel de formulario */
-  --sheet:#ffffff;      /* hoja */
-  --ink:#16264a;        /* tinta azul de impresión */
-  --ink-soft:#56627c;   /* texto secundario */
-  --rule:#d5dbe6;       /* líneas del formulario */
-  --field:#eef2f8;      /* fondo de campo */
-  --stamp:#5b3fc0;      /* sello morado de notaría */
-  --warn:#a3361f;       /* aviso */
-  --cta-bg:#16264a; --cta-ink:#f5f7fa; --cta-hi:#c9bdf5;
-  --display:"Archivo","Arial Narrow",ui-sans-serif,system-ui,sans-serif;
-  --body:"Atkinson Hyperlegible",ui-sans-serif,system-ui,sans-serif;
-}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --paper:#0f1626; --sheet:#151e33; --ink:#e4e9f4; --ink-soft:#9aa6c0; --rule:#2a3550; --field:#1c2740;
-  --stamp:#a48cff; --warn:#f0896b; --cta-bg:#e4e9f4; --cta-ink:#0f1626; --cta-hi:#5b3fc0; color-scheme:dark}}
-:root[data-theme="dark"]{
-  --paper:#0f1626; --sheet:#151e33; --ink:#e4e9f4; --ink-soft:#9aa6c0; --rule:#2a3550; --field:#1c2740;
-  --stamp:#a48cff; --warn:#f0896b; --cta-bg:#e4e9f4; --cta-ink:#0f1626; --cta-hi:#5b3fc0; color-scheme:dark}
-*{box-sizing:border-box}
-body{background:var(--paper);color:var(--ink);font:16px/1.55 var(--body);
-  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:32px 56px}
-.page{max-width:1080px;margin:0 auto;display:grid;gap:40px}
-header{display:grid;gap:12px;max-width:44rem}
-h1{font:800 clamp(44px,11vw,88px)/.92 var(--display);font-stretch:68%;letter-spacing:-.01em;margin:0;text-wrap:balance}
-.lead{margin:0;color:var(--ink-soft);font-size:17px;max-width:38rem}
-.privacy{margin:0;font-size:14px;color:var(--ink-soft)}
-.layout{display:grid;gap:32px;align-items:start}
-@media (min-width:880px){.layout{grid-template-columns:minmax(0,380px) minmax(0,1fr);gap:48px}
-  .datos{position:sticky;top:calc(env(safe-area-inset-top,0px) + 16px);max-height:calc(100vh - 32px);overflow:auto}}
-h2{font:800 26px/1.1 var(--display);font-stretch:75%;margin:0}
-h3{font:700 15px/1.3 var(--body);margin:0;color:var(--ink-soft)}
-/* Hoja de datos */
-.datos{background:var(--sheet);border:1px solid var(--rule);border-radius:6px;padding:22px;display:grid;gap:18px;min-width:0}
-.datos p{margin:0}
-.fila{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-@media (max-width:420px){.fila{grid-template-columns:1fr}}
-label{display:grid;gap:5px;font-size:14px;font-weight:700;min-width:0}
-.hint{font-weight:400;color:var(--ink-soft);font-size:13px}
-input[type=text],input[type=number],input[type=email],input[type=tel],select{
-  font:inherit;font-size:15px;color:var(--ink);background:var(--field);border:0;border-bottom:2px solid var(--rule);
-  border-radius:3px 3px 0 0;padding:9px 10px;width:100%}
-input:focus,select:focus{outline:none;border-bottom-color:var(--stamp)}
-:focus-visible{outline:3px solid var(--stamp);outline-offset:2px}
-fieldset{border:0;padding:0;margin:0;display:grid;gap:8px;min-width:0}
-legend{font-size:14px;font-weight:700;padding:0;margin-bottom:8px}
-.opciones{display:flex;flex-wrap:wrap;gap:8px}
-.opciones label{display:flex;align-items:center;gap:8px;font-weight:400;font-size:15px;border:1px solid var(--rule);
-  border-radius:3px;padding:7px 12px;cursor:pointer;background:var(--sheet)}
-.opciones input{accent-color:var(--stamp);margin:0}
-.opciones label:has(input:checked){border-color:var(--stamp);color:var(--stamp);font-weight:700}
-.linea{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
-.nota{font-size:13px;color:var(--ink-soft)}
-button{font:700 15px var(--body);border-radius:3px;padding:9px 14px;cursor:pointer}
-.btn-copiar{background:var(--ink);color:var(--paper);border:0}
-.btn-sec{background:transparent;color:var(--ink);border:1px solid var(--rule)}
-/* Formulario de respuestas */
-.respuestas{display:grid;gap:36px;min-width:0}
-.grupo{display:grid;gap:0}
-.grupo h2{padding-bottom:10px;border-bottom:2px solid var(--ink)}
-.item{display:grid;gap:8px;padding:18px 0;border-bottom:1px solid var(--rule)}
-.pregunta{font-size:15px;color:var(--ink-soft);margin:0}
-.campo{position:relative;background:var(--field);border-radius:3px;padding:12px 14px;font-size:16px;
-  white-space:pre-wrap;word-break:break-word;min-width:0}
-.aviso{margin:0;font-size:14px;color:var(--warn)}
-.aviso strong{font-weight:700}
-.acciones{display:flex;justify-content:flex-end}
-/* El sello */
-.sello{position:absolute;right:10px;top:50%;transform:translateY(-50%) rotate(-9deg);pointer-events:none;
-  font:800 15px/1 var(--display);font-stretch:80%;letter-spacing:.04em;color:var(--stamp);
-  border:2.5px solid var(--stamp);border-radius:5px;padding:6px 10px;background:color-mix(in srgb,var(--field) 70%,transparent);
-  opacity:0}
-.item.copiada .sello{opacity:.92}
-@media (prefers-reduced-motion:no-preference){
-  .item.copiada .sello{animation:estampar .32s cubic-bezier(.2,1.6,.4,1) both}
-  @keyframes estampar{from{opacity:0;transform:translateY(-50%) rotate(-9deg) scale(1.9)}to{opacity:.92;transform:translateY(-50%) rotate(-9deg) scale(1)}}}
-/* Kit */
-.kit{background:var(--cta-bg);color:var(--cta-ink);border-radius:6px;padding:28px;display:grid;gap:14px;max-width:44rem}
-.kit h2{font-size:30px}
-.kit p{margin:0}
-.kit ul{margin:0;padding-left:20px;display:grid;gap:4px}
-.precio{font:800 34px/1 var(--display);font-stretch:75%;color:var(--cta-hi)}
-footer{font-size:13px;color:var(--ink-soft)}
-</style>
 
-<div class="page">
-  <header>
-    <h1>¿Qué contesto?</h1>
-    <p class="lead">Llena tus datos una vez y copia las respuestas a las preguntas de selección que más salen en Computrabajo, elempleo y Magneto.</p>
-    <p class="privacy">Tus datos se quedan en este celular. La página no los envía a ningún lado.</p>
-  </header>
-
-  <div class="layout">
-    <form class="datos" id="f" autocomplete="on">
-      <h2>Tus datos</h2>
-      <p class="nota">Viene llenado con un ejemplo. Cámbialo por lo tuyo.</p>
-      <fieldset>
-        <legend>Tu experiencia</legend>
-        <div class="opciones">
-          <label><input type="radio" name="perfil" value="A" id="pA"> No he trabajado</label>
-          <label><input type="radio" name="perfil" value="B" id="pB" checked> He trabajado, formal o informal</label>
-        </div>
-      </fieldset>
-      <fieldset>
-        <legend>¿Estudias?</legend>
-        <div class="opciones">
-          <label><input type="radio" name="estudia" value="si" id="eSi" checked> Sí</label>
-          <label><input type="radio" name="estudia" value="no" id="eNo"> No</label>
-        </div>
-      </fieldset>
-      <div class="fila">
-        <label>Celular<input type="tel" id="cel" value="3001234567"></label>
-        <label>Correo<input type="email" id="mail" value="nombre.apellido@gmail.com"></label>
-      </div>
-      <div class="fila">
-        <label>Localidad<input type="text" id="loc" value="Kennedy"></label>
-        <label>Barrio<input type="text" id="barrio" value="Castilla"></label>
-      </div>
-      <div class="fila">
-        <label>Minutos hasta el norte<span class="hint">Míralo en Google Maps</span><input type="number" id="min" value="50" min="5" max="180"></label>
-        <label>Estudios<span class="hint">Último nivel</span><select id="nivel"><option value="bach">Bachiller</option><option value="u" selected>Técnico o universidad</option></select></label>
-      </div>
-      <div id="bloqueEstudio" style="display:grid;gap:18px">
-        <div class="fila">
-          <label>Carrera<input type="text" id="carrera" value="Administración de Empresas"></label>
-          <label>Modalidad<select id="modal"><option>presencial</option><option>virtual</option></select></label>
-        </div>
-        <div class="fila">
-          <label>Clases desde<input type="text" id="hIni" value="7:00 a. m."></label>
-          <label>Clases hasta<input type="text" id="hFin" value="2:00 p. m."></label>
-        </div>
-        <label>Vacaciones desde<input type="text" id="vac" value="el 1 de diciembre"></label>
-      </div>
-      <div id="bloqueExp" style="display:grid;gap:18px">
-        <div class="fila">
-          <label>Cargo o actividad<input type="text" id="cargo" value="auxiliar de caja"></label>
-          <label>Meses<input type="number" id="meses" value="8" min="1" max="120"></label>
-        </div>
-        <label>Dónde<input type="text" id="lugar" value="un restaurante de comida rápida"></label>
-        <fieldset id="bloqueFun">
-          <legend>Qué hacías (marca solo lo real)</legend>
-          <div class="opciones">
-            <label><input type="checkbox" value="atención al cliente" checked> Atención al cliente</label>
-            <label><input type="checkbox" value="manejo de caja (efectivo y datáfono)" checked> Caja</label>
-            <label><input type="checkbox" value="toma de pedidos" checked> Pedidos</label>
-            <label><input type="checkbox" value="surtido y exhibición de productos"> Surtido</label>
-            <label><input type="checkbox" value="recibo de mercancía e inventario"> Inventario</label>
-            <label><input type="checkbox" value="ventas y asesoría a clientes"> Ventas</label>
-          </div>
-        </fieldset>
-      </div>
-      <div class="linea">
-        <span class="nota">Las respuestas cambian mientras escribes.</span>
-        <button type="button" class="btn-sec" id="reset">Volver al ejemplo</button>
-      </div>
-    </form>
-
-    <section class="respuestas" id="out" aria-live="polite"></section>
+<header class="top">
+  <div class="wrap">
+    <a class="marca" href="#inicio" aria-label="Te Llaman, inicio"><b>Te Llaman</b></a>
+    <nav class="nav" aria-label="Secciones">
+      <a href="#formulario">Formulario</a>
+      <a href="#entrevista">Entrevista</a>
+      <a href="#hoja">Hoja de vida</a>
+      <a href="#despues">Después</a>
+      <a href="#cuidado">Cuidado</a>
+    </nav>
   </div>
+</header>
 
-  <section class="kit">
-    <h2>Te Llaman, el kit completo</h2>
-    <p>Para postularte a 30 empleos de temporada en una semana sabiendo qué decir.</p>
-    <ul>
-      <li>Más de 60 preguntas reales de selección con respuestas para tres situaciones</li>
-      <li>Tres plantillas de hoja de vida que leen los filtros automáticos</li>
-      <li>Guía de entrevista de temporada y plan de siete días</li>
-    </ul>
-    <div class="linea"><span class="precio">$19.900</span><span>Disponible pronto en Hotmart</span></div>
-  </section>
+<main id="inicio">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="kicker">Primer empleo · temporada · Colombia</span>
+      <h1>Contesta bien.<br><em>Que te llamen.</em></h1>
+      <p class="lead">Llena tus datos una vez y copia tus respuestas para los formularios de Computrabajo, elempleo y Magneto. Más guía de entrevista, hoja de vida y checklist.</p>
+      <div class="btns">
+        <a class="btn p" href="#formulario">Armar mis respuestas</a>
+        <a class="btn s" href="#entrevista">Preparar la entrevista</a>
+      </div>
+      <div class="chips"><span id="chipN">+60 respuestas</span><span>Gratis</span><span>Tus datos no salen de tu celular</span></div>
+    </div>
+    <div class="ficha" aria-hidden="true">
+      <div class="q">¿Cuánto tiempo de experiencia tienes?</div>
+      <div class="campo mal">Sin experiencia</div>
+      <span class="estampa no">ASÍ NO</span>
+      <div class="campo">6 meses de experiencia informal en atención al cliente y manejo de caja.</div>
+      <span class="estampa si">ASÍ SÍ</span>
+    </div>
+  </div>
+</section>
 
-  <footer>Te Llaman. Son respuestas modelo: nunca afirmes algo que no tienes.</footer>
-</div>
+<!-- 1. FORMULARIO -->
+<section class="bloque" id="formulario">
+  <div class="wrap">
+    <div class="cab"><div><span class="num">Paso 1</span><h2>Las preguntas del formulario</h2>
+      <p>Son las preguntas de selección que más salen en las ofertas de temporada. Llena tus datos a la izquierda y las respuestas se arman solas. Copia, pega y listo.</p></div></div>
+    <div class="datos">
+      <aside class="tarjeta panel" aria-label="Tus datos">
+        <h3>Tus datos</h3>
+        <p class="ayuda">Viene con un ejemplo. Cámbialo por lo tuyo.</p>
+        <span class="lbl">Tu experiencia</span>
+        <div class="seg" role="radiogroup">
+          <label><input type="radio" name="exp" value="no"><span>No he trabajado</span></label>
+          <label><input type="radio" name="exp" value="si" checked><span>Formal o informal</span></label>
+        </div>
+        <span class="lbl">¿Estudias?</span>
+        <div class="seg" role="radiogroup">
+          <label><input type="radio" name="est" value="si" checked><span>Sí</span></label>
+          <label><input type="radio" name="est" value="no"><span>No</span></label>
+        </div>
+        <div class="f">
+          <label class="full">Nombre<input id="nombre" value="Andrés"></label>
+          <label>Celular<input id="cel" inputmode="numeric" value="3001234567"></label>
+          <label>Correo<input id="mail" type="email" value="nombre.apellido@gmail.com"></label>
+          <label>Localidad<input id="loc" value="Kennedy"></label>
+          <label>Barrio<input id="barrio" value="Castilla"></label>
+          <label class="full">Cargo que buscas<input id="busco" value="asesor comercial"></label>
+        </div>
+        <details class="mas" open>
+          <summary>Estudio y horario</summary>
+          <div class="f" style="margin-top:8px">
+            <label class="full">Carrera<input id="carrera" value="Administración de Empresas"></label>
+            <label>Clases desde<input id="hIni" value="7:00 a. m."></label>
+            <label>Hasta<input id="hFin" value="2:00 p. m."></label>
+            <label class="full">Vacaciones desde<input id="vac" value="el 1 de diciembre"></label>
+          </div>
+        </details>
+        <details class="mas">
+          <summary>Experiencia</summary>
+          <div class="f" style="margin-top:8px">
+            <label>Cargo<input id="cargo" value="auxiliar de caja"></label>
+            <label>Meses<input id="meses" inputmode="numeric" value="8"></label>
+            <label class="full">Dónde<input id="lugar" value="un restaurante de comida rápida"></label>
+            <label>Función 1<input id="f1" value="atención al cliente"></label>
+            <label>Función 2<input id="f2" value="manejo de caja"></label>
+          </div>
+        </details>
+        <details class="mas">
+          <summary>Transporte y tallas</summary>
+          <div class="f" style="margin-top:8px">
+            <label>Minutos al trabajo<input id="min" inputmode="numeric" value="40"></label>
+            <label>Estatura<input id="alt" value="1,70 m"></label>
+            <label>Camiseta<input id="cam" value="M"></label>
+            <label>Pantalón<input id="pan" value="32"></label>
+            <label>Calzado<input id="cal" value="40"></label>
+          </div>
+        </details>
+        <p class="privado">🔒 Todo se guarda solo en este dispositivo. La página no envía tus datos a ningún lado.</p>
+      </aside>
+      <div>
+        <div class="buscar"><input id="q" type="search" placeholder="Busca tu pregunta: barrio, horario, caja…" aria-label="Buscar pregunta"></div>
+        <div class="cats" id="cats" role="tablist"></div>
+        <div id="lista"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. ENTREVISTA -->
+<section class="bloque" id="entrevista">
+  <div class="wrap">
+    <div class="cab"><div><span class="num">Paso 2</span><h2>La entrevista</h2>
+      <p>Las 4 preguntas que más asustan en temporada, con la respuesta armada.</p></div></div>
+    <div class="grid2">
+      <article class="tarjeta">
+        <span class="vid">Video: «Háblame de ti»</span>
+        <h3 style="font-size:30px">«Háblame de ti» en 30 segundos</h3>
+        <p style="color:var(--tinta2)">Quién eres, qué has hecho y por qué estás ahí. Nada más. Se arma con tus datos:</p>
+        <div class="dice" id="hablame"></div>
+        <div class="pie" style="display:flex;gap:10px;flex-wrap:wrap"><button class="copiar" data-copy="hablame">Copiar</button></div>
+        <div class="reloj">
+          <svg class="anillo" viewBox="0 0 84 84" aria-hidden="true"><circle class="bg" cx="42" cy="42" r="36"/><circle class="fg" id="arco" cx="42" cy="42" r="36" stroke-dasharray="226.2" stroke-dashoffset="0"/><text x="42" y="51" text-anchor="middle" id="seg">30</text></svg>
+          <div><button class="btn s" id="btnReloj" type="button">Practicar en voz alta</button><div style="color:var(--gris);font-size:14px;margin-top:6px">Hazlo 3 veces antes de ir.</div></div>
+        </div>
+      </article>
+      <article class="tarjeta">
+        <span class="vid">Video: «Véndeme este esfero»</span>
+        <h3 style="font-size:30px">«Véndeme este esfero»</h3>
+        <ol class="pasos" style="margin-top:12px">
+          <li><div><b>Pregunta.</b><div class="dice">¿Para qué lo usarías? ¿Firmas mucho? ¿Tomas apuntes?</div></div></li>
+          <li><div><b>Conecta.</b><div class="dice">Este no se seca y te cabe en el bolsillo: perfecto para tus apuntes.</div></div></li>
+          <li><div><b>Cierra.</b><div class="dice">¿Te lo empaco?</div></div></li>
+        </ol>
+        <p style="color:var(--gris);margin-bottom:0">El error es empezar hablando del esfero. Vender es escuchar primero.</p>
+      </article>
+      <article class="tarjeta">
+        <span class="vid">Video: «¿Qué harías con un cliente molesto?»</span>
+        <h3 style="font-size:30px">Cliente molesto: 4 pasos</h3>
+        <ol class="pasos" style="margin-top:12px">
+          <li>Lo escucho sin interrumpir.</li>
+          <li>Me disculpo por el inconveniente.</li>
+          <li>Busco una solución.</li>
+          <li>Si no está en mis manos, llamo a mi líder.</li>
+        </ol>
+        <p style="color:var(--gris);margin-bottom:0">Si tienes un ejemplo real, cuéntalo: vale más que una respuesta perfecta.</p>
+      </article>
+      <article class="tarjeta">
+        <span class="vid">Video: «No entendiste la pregunta»</span>
+        <h3 style="font-size:30px">No entendiste la pregunta</h3>
+        <p style="color:var(--tinta2)">No adivines. Di una de estas:</p>
+        <div class="dice">Disculpe, ¿me la puede repetir?</div>
+        <div class="dice">Para estar seguro, ¿me pregunta por mi experiencia en caja?</div>
+        <p style="color:var(--gris);margin-bottom:0">Eso no te quita puntos. Te quita puntos responder otra cosa.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 3. HOJA DE VIDA -->
+<section class="bloque" id="hoja">
+  <div class="wrap">
+    <div class="cab"><div><span class="num">Paso 3</span><h2>Tu hoja de vida</h2>
+      <p>Los portales la leen con un programa. Lo claro pasa; lo bonito a veces no.</p></div></div>
+    <div class="grid3">
+      <article class="tarjeta">
+        <span class="vid">Video: «Tu hoja de vida bonita te descarta»</span>
+        <h3 style="font-size:28px;margin-bottom:14px">Bonita vs. clara</h3>
+        <div class="hvs">
+          <div class="mini" aria-label="Hoja de vida con columnas, íconos y barras"><div class="col"><div class="foto"></div><i></i><i></i><i></i><div class="b"><u></u></div><div class="b"><u style="width:45%"></u></div></div><div class="der"><div class="h" style="background:#ff7aa8;width:70%"></div><i></i><i></i><div class="h" style="background:#ffd166;width:80%"></div><i></i><i></i></div><span class="sel" style="color:#c93434;border-color:#c93434">NO</span></div>
+          <div class="mini" aria-label="Hoja de vida de una sola columna"><div class="der" style="padding:12% 10%"><div class="h" style="background:#16264a;width:70%;margin-top:0"></div><div class="h" style="background:#16264a;width:45%;height:7px"></div><i></i><i></i><div class="h" style="background:#16264a;width:45%;height:7px"></div><i></i><i></i><div class="h" style="background:#16264a;width:45%;height:7px"></div><i></i></div><span class="sel" style="color:#14845a;border-color:#14845a">SÍ</span></div>
+        </div>
+        <p style="color:var(--tinta2);margin-bottom:0">Una columna, letra normal, títulos claros y en PDF.</p>
+      </article>
+      <article class="tarjeta">
+        <span class="vid">Video: «Primer empleo: 3 cosas»</span>
+        <h3 style="font-size:28px">Primer empleo: pon estas 3 cosas</h3>
+        <ol class="pasos" style="margin-top:12px">
+          <li><div><b>Perfil corto</b> con tu disponibilidad exacta.</div></li>
+          <li><div><b>Actividades con responsabilidad:</b> ventas por tu cuenta, voluntariado, eventos del colegio.</div></li>
+          <li><div><b>Habilidades reales:</b> manejo de dinero, atención a personas, computador.</div></li>
+        </ol>
+        <p style="color:var(--gris);margin-bottom:0">Una página. Sin diseños raros.</p>
+      </article>
+      <article class="tarjeta">
+        <span class="vid">Video: «Tu hoja de vida en 1 minuto con IA»</span>
+        <h3 style="font-size:28px">Adáptala con IA en 1 minuto</h3>
+        <p style="color:var(--tinta2);margin:10px 0 0">Abre una IA gratis, pega tu hoja de vida y la oferta, y escribe:</p>
+        <pre class="prompt" id="prompt">Reescribe mi perfil y mi experiencia con las palabras clave de esta oferta, sin inventar nada que no esté en mi hoja de vida. Usa frases cortas y una sola columna.
+
+MI HOJA DE VIDA:
+[pégala aquí]
+
+LA OFERTA:
+[pégala aquí]</pre>
+        <button class="copiar" data-copy="prompt">Copiar el prompt</button>
+        <p style="color:var(--gris);font-size:14px;margin-bottom:0">Revisa que todo sea verdad antes de enviarla.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 4. DESPUÉS -->
+<section class="bloque" id="despues">
+  <div class="wrap">
+    <div class="cab"><div><span class="num">Paso 4</span><h2>Después de postularte</h2>
+      <p>Postúlate mucho, ordenado, y no pierdas la llamada.</p></div></div>
+    <div class="grid2">
+      <article class="tarjeta">
+        <span class="vid">Video: «30 postulaciones en una tarde»</span>
+        <h3 style="font-size:30px">Tu tabla de postulaciones</h3>
+        <p style="color:var(--tinta2)">Anota cada una para no perder ninguna. Se guarda en este dispositivo.</p>
+        <div class="scroll"><table class="tabla"><thead><tr><th>Empresa</th><th>Cargo</th><th>Fecha</th><th>Estado</th><th></th></tr></thead><tbody id="tb"></tbody></table></div>
+        <form class="addrow" id="addForm"><input id="nEmp" placeholder="Empresa" aria-label="Empresa"><input id="nCar" placeholder="Cargo" aria-label="Cargo"><button class="btn p" style="padding:10px 16px" type="submit">Agregar</button></form>
+        <p class="cnt" id="tbCnt" style="margin-bottom:0"></p>
+      </article>
+      <article class="tarjeta">
+        <span class="vid">Video: «Postúlate a esta hora»</span>
+        <h3 style="font-size:30px">Cuándo postularte</h3>
+        <ol class="pasos" style="margin-top:12px">
+          <li><div>Filtra por <b>«hoy»</b> o <b>«últimos 3 días»</b>. Una oferta de hace 2 semanas ya tiene a alguien elegido.</div></li>
+          <li><div>Hazlo de <b>lunes a jueves en la mañana</b>, cuando revisan los reclutadores.</div></li>
+        </ol>
+        <div class="horas" aria-label="Días recomendados"><div class="si">L<small>mañana</small></div><div class="si">M<small>mañana</small></div><div class="si">M<small>mañana</small></div><div class="si">J<small>mañana</small></div><div>V</div><div>S</div><div>D</div></div>
+        <span class="vid" style="margin-top:18px">Video: «Si no te llaman, revisa esto»</span>
+        <ul class="check" id="revisa">
+          <li><label><input type="checkbox"><span>Revisé Spam y Promociones del correo</span></label></li>
+          <li><label><input type="checkbox"><span>Revisé el correo a la 1 p. m. y a las 6 p. m.</span></label></li>
+          <li><label><input type="checkbox"><span>Contesto los números desconocidos</span></label></li>
+        </ul>
+      </article>
+      <article class="tarjeta">
+        <span class="vid">Video: «Checklist antes de la entrevista»</span>
+        <h3 style="font-size:30px">Checklist antes de la entrevista</h3>
+        <div class="barra-p"><u id="prog"></u></div>
+        <ul class="check" id="chk">
+          <li><label><input type="checkbox"><span>Confirmé la cita por escrito</span></label></li>
+          <li><label><input type="checkbox"><span>Busqué la ruta el día anterior</span></label></li>
+          <li><label><input type="checkbox"><span>Salgo con 45 minutos de margen</span></label></li>
+          <li><label><input type="checkbox"><span>Hoja de vida impresa, cédula y esfero</span></label></li>
+          <li><label><input type="checkbox"><span>Celular cargado y en silencio</span></label></li>
+          <li><label><input type="checkbox"><span>Repasé mi «háblame de ti»</span></label></li>
+        </ul>
+        <p style="color:var(--gris);margin-bottom:0">Llegar tarde es el error que no se perdona.</p>
+      </article>
+      <article class="tarjeta">
+        <span class="vid">Video: «No te han llamado después de la entrevista»</span>
+        <h3 style="font-size:30px">El mensaje de seguimiento</h3>
+        <p style="color:var(--tinta2)">Si pasaron 5 días hábiles y no te llaman, manda esto una sola vez:</p>
+        <div class="f" style="margin-bottom:10px"><label>Día de la entrevista<input id="dia" value="el lunes"></label><label>Cargo<input id="cargoSeg" value="asesor comercial"></label></div>
+        <div class="dice" id="seg1" style="background:#d9f2e3;color:#16264a"></div>
+        <button class="copiar" data-copy="seg1">Copiar mensaje</button>
+        <p style="color:var(--gris);margin-bottom:0">No insistas todos los días. Un mensaje te pone otra vez en la lista.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 5. CUIDADO -->
+<section class="bloque" id="cuidado">
+  <div class="wrap">
+    <div class="cab"><div><span class="num">Paso 5</span><h2>Cuídate</h2>
+      <p>Que no te estafen y que te paguen lo que es.</p></div></div>
+    <div class="grid2">
+      <article class="tarjeta">
+        <span class="vid">Video: «3 señales de estafa»</span>
+        <h3 style="font-size:30px">Señales de estafa</h3>
+        <ul class="alerta" style="margin-top:12px">
+          <li>Te piden plata: curso, uniforme, examen médico o «inscripción».</li>
+          <li>Prometen millones desde la casa sin experiencia, «inversión inicial» o multinivel.</li>
+          <li>Te escriben de un número sin nombre de empresa y piden datos bancarios.</li>
+          <li>La oferta no tiene empresa ni dirección, y el sueldo es muy alto para el cargo.</li>
+        </ul>
+        <p style="margin-bottom:0"><b>Una empresa seria nunca te cobra por trabajar.</b></p>
+      </article>
+      <article class="tarjeta">
+        <span class="vid">Video: «Domingo a domingo»</span>
+        <h3 style="font-size:30px">Domingo a domingo</h3>
+        <p style="color:var(--tinta2)">Trabajas cualquier día, incluidos domingos y festivos, y descansas un día entre semana.</p>
+        <div class="semana" aria-hidden="true"><div>L<small>trabajo</small></div><div>M<small>trabajo</small></div><div class="d">M<small>descanso</small></div><div>J<small>trabajo</small></div><div>V<small>trabajo</small></div><div>S<small>trabajo</small></div><div>D<small>trabajo</small><span class="badge">+90 %</span></div></div>
+        <h3 style="font-size:22px;margin:18px 0 10px">¿Cuánto te deben pagar de más?</h3>
+        <div class="calc">
+          <label>Horas en domingo o festivo<input id="hDom" type="number" min="0" value="8"></label>
+          <label>Horas nocturnas (después de 7 p. m.)<input id="hNoc" type="number" min="0" value="4"></label>
+          <label>Salario mensual<input id="sal" type="number" min="0" value="1750905"></label>
+        </div>
+        <div class="res" aria-live="polite"><span>Recargos de esas horas</span><b id="totRec">$0</b><span class="cnt" id="detRec"></span></div>
+        <p class="cnt" style="margin-bottom:0">Cálculo aproximado con las reglas de 2026: jornada de 42 h (hora = salario ÷ 210), dominical y festivo 90 %, nocturno 35 %. No incluye horas extra.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="bloque" style="border-top:0;padding-top:20px">
+  <div class="wrap">
+    <div class="kit">
+      <div>
+        <span class="num" style="color:var(--lila)">Te Llaman en TikTok</span>
+        <h2>Un tip nuevo cada día</h2>
+        <p>Videos cortos con lo que de verdad preguntan en los formularios y en las entrevistas de temporada. Guárdalos y compártelos con quien esté buscando trabajo.</p>
+        <div class="btns"><a class="btn p" style="background:var(--lila);color:#16264a" href="https://www.tiktok.com/@tellaman.co" target="_blank" rel="noopener">Seguir a @tellaman.co</a></div>
+      </div>
+      <ul>
+        <li>Respuestas para el formulario</li>
+        <li>Entrevista paso a paso</li>
+        <li>Hoja de vida que pasa filtros</li>
+        <li>Qué hacer si no te llaman</li>
+      </ul>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span><b style="color:var(--tinta)">Te Llaman</b> · Guía gratuita para primer empleo y temporada en Colombia.</span>
+    <span>No somos un portal de empleo ni pedimos datos. Nunca pagues por trabajar.</span>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status">Copiado ✓</div>
 
 <script>
-const $=id=>document.getElementById(id);
-const KEY='quecontesto-v2';
-const v=id=>($(id).value||'').trim();
-const perfil=()=>document.querySelector('input[name=perfil]:checked').value;
-const estudia=()=>document.querySelector('input[name=estudia]:checked').value==='si';
-const funciones=()=>[...document.querySelectorAll('#bloqueFun input:checked')].map(i=>i.value);
-const lista=a=>a.length<2?a.join(''):a.slice(0,-1).join(', ')+' y '+a.at(-1);
+(function(){
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const KEY='tellaman-v1';
+const CAMPOS=['nombre','cel','mail','loc','barrio','busco','carrera','hIni','hFin','vac','cargo','meses','lugar','f1','f2','min','alt','cam','pan','cal','dia','cargoSeg'];
+const guardar=()=>{try{const o={exp:val('exp'),est:val('est')};CAMPOS.forEach(k=>o[k]=$('#'+k).value);o.tabla=tabla;o.chk=$$('#chk input').map(i=>i.checked);o.rev=$$('#revisa input').map(i=>i.checked);localStorage.setItem(KEY,JSON.stringify(o))}catch(e){}};
+const val=n=>(document.querySelector('input[name='+n+']:checked')||{}).value;
+let tabla=[];
+try{const o=JSON.parse(localStorage.getItem(KEY)||'null');if(o){CAMPOS.forEach(k=>{if(o[k]!=null&&$('#'+k))$('#'+k).value=o[k]});['exp','est'].forEach(n=>{const r=document.querySelector('input[name='+n+'][value="'+o[n]+'"]');if(r)r.checked=true});tabla=o.tabla||[];(o.chk||[]).forEach((c,i)=>{const x=$$('#chk input')[i];if(x)x.checked=c});(o.rev||[]).forEach((c,i)=>{const x=$$('#revisa input')[i];if(x)x.checked=c})}}catch(e){}
 
-function grupos(){
-  const E=estudia(),B=perfil()==='B',fun=funciones(),m=+v('meses')||0,min=+v('min')||0;
-  const caja=fun.some(f=>f.startsWith('manejo de caja'));
-  const disp=E?`En noviembre puedo en las tardes (salgo de clase a las ${v('hFin')}) y los fines de semana; desde ${v('vac')}, tiempo completo.`:'Tengo disponibilidad completa e inmediata.';
-  return [
-    ['Contacto',[
-      ['Indica tu número de WhatsApp actualizado',v('cel'),'Ponlo sin espacios y sin el 57 si no lo piden.'],
-      ['Indica únicamente tu correo electrónico actualizado',v('mail'),'Revisa spam y promociones dos veces al día: ahí llegan muchas citaciones.'],
-    ]],
-    ['Dónde vives',[
-      ['¿En qué barrio y localidad vives?',`Bogotá, localidad de ${v('loc')}, barrio ${v('barrio')}.`],
-      ['Las tiendas están en el norte, ¿te queda bien el desplazamiento?',
-        min<=75?`Sí, me queda bien. Llego en unos ${min} minutos en transporte público.`:`Llego en unos ${min} minutos en transporte público y puedo cumplir el horario.`,
-        min>90?'Más de 90 minutos de trayecto: piénsalo, los turnos de cierre terminan tarde.':''],
-      ['¿Cuenta con medio de transporte?','Me desplazo en transporte público (TransMilenio y SITP) sin dificultad.'],
-    ]],
-    ['Estudio y horario',[
-      ['¿Estás estudiando actualmente? Indica carrera y horarios',
-        E?`Sí, ${v('carrera')}, ${v('modal')}, de lunes a viernes de ${v('hIni')} a ${v('hFin')}. ${disp}`:'No estoy estudiando en este momento; tengo disponibilidad completa e inmediata.'],
-      ['¿Eres bachiller? ¿Tienes el certificado?',v('nivel')==='u'&&E?`Sí, soy bachiller. Actualmente estudio ${v('carrera')}.`:'Sí, soy bachiller.'],
-      ...(E?[['¿Por qué fines de semana y no tiempo completo?','Porque entre semana estudio y quiero cumplir con las dos cosas. Los fines de semana y festivos puedo dar el 100 %, y en vacaciones, tiempo completo.']]:[]),
-      ['¿Tienes disponibilidad de domingo a domingo con un día de descanso?',E?`En vacaciones, sí. ${disp}`:'Sí, de domingo a domingo con un día compensatorio.'],
-      ['¿Cuentas con disponibilidad inmediata?','Sí, tengo disponibilidad inmediata para entrevista y para empezar.'],
-    ]],
-    ['Experiencia',[
-      ['¿Cuánto tiempo de experiencia tienes como asesor comercial?',
-        B?`${m} meses de experiencia en atención al cliente como ${v('cargo')} en ${v('lugar')}.`:'Sin experiencia formal, pero tengo facilidad para hablar con las personas y muchas ganas de aprender.'],
-      ['Cuenta con experiencia, describa brevemente',
-        B?`Sí. Unos ${m} meses como ${v('cargo')} en ${v('lugar')}${fun.length?': '+lista(fun)+'.':'.'}`:'No tengo experiencia laboral formal. Aprendo rápido, soy puntual y me gusta atender personas.'],
-      ['¿Has manejado caja? ¿Por cuánto tiempo?',B&&caja?`Sí, ${m} meses en ${v('lugar')}: cobro en efectivo y datáfono.`:'No he manejado caja formalmente, pero manejo bien las cuentas y aprendo rápido.'],
-      ['¿Cuentas con mínimo 6 meses certificados en ventas de ropa o calzado?','No.','Si no los tienes, contesta que no. Mentir aquí es lo que más descarta cuando verifican referencias.'],
-    ]],
-    ['Motivación',[
-      ['¿Qué es lo que más te gusta de trabajar en ventas?','Me gusta hablar con las personas y me motivan los retos y las metas de ventas.'],
-      ['¿La oferta se ajusta a lo que buscas?','Sí: es de temporada, en un horario que puedo cumplir y en atención al cliente, que es lo que busco.'],
-    ]],
-  ];
-}
+function d(){const g=k=>($('#'+k).value||'').trim();return{exp:val('exp')==='si',est:val('est')==='si',nombre:g('nombre')||'[tu nombre]',cel:g('cel').replace(/\D/g,'')||'3XXXXXXXXX',mail:g('mail')||'tucorreo@gmail.com',loc:g('loc')||'[localidad]',barrio:g('barrio')||'[barrio]',busco:g('busco')||'[cargo]',carrera:g('carrera')||'[carrera]',hIni:g('hIni')||'[hora]',hFin:g('hFin')||'[hora]',vac:g('vac')||'[fecha]',cargo:g('cargo')||'[cargo]',meses:g('meses')||'[meses]',lugar:g('lugar')||'[dónde]',f1:g('f1')||'atención al cliente',f2:g('f2')||'manejo de caja',min:g('min')||'40',alt:g('alt'),cam:g('cam'),pan:g('pan'),cal:g('cal')}}
 
-function render(){
-  $('bloqueEstudio').hidden=!estudia();
-  $('bloqueExp').hidden=perfil()!=='B';
-  const out=$('out'); out.replaceChildren();
-  grupos().forEach(([titulo,items])=>{
-    const g=document.createElement('section'); g.className='grupo';
-    const h=document.createElement('h2'); h.textContent=titulo; g.appendChild(h);
-    items.forEach(([q,a,aviso])=>{
-      const it=document.createElement('div'); it.className='item';
-      it.innerHTML='<p class="pregunta"></p><div class="campo"><span class="txt"></span><span class="sello" aria-hidden="true">Copiada</span></div>'+(aviso?'<p class="aviso"></p>':'')+'<div class="acciones"><button type="button" class="btn-copiar">Copiar respuesta</button></div>';
-      it.querySelector('.pregunta').textContent=q;
-      it.querySelector('.txt').textContent=a;
-      if(aviso) it.querySelector('.aviso').textContent=aviso;
-      const b=it.querySelector('button');
-      b.addEventListener('click',()=>copiar(a,b,it));
-      g.appendChild(it);
-    });
-    out.appendChild(g);
-  });
-  guardar();
+/* Banco de preguntas: [categoría, pregunta, respuesta(d), consejo, video] */
+const P=[
+['Contacto','Indica tu número de WhatsApp actualizado',x=>x.cel,'Solo 10 dígitos, sin espacios y sin el 57 si no lo piden. Pon el número que siempre contestas.','11'],
+['Contacto','Número de contacto (celular)',x=>x.cel,'Un solo número. Si pones dos, la llamada puede ir al que no usas.','11'],
+['Contacto','Indica únicamente tu correo electrónico actualizado (sin espacios)',x=>x.mail,'Nada más en el campo: ni «mi correo es…».'],
+['Contacto','Indique su correo, por este medio será citado a entrevista',x=>x.mail,'Activa las notificaciones del correo en el celular y revisa Spam y Promociones.','3'],
+['Contacto','¿Tienes WhatsApp en ese número?',x=>'Sí, ese número tiene WhatsApp y lo reviso varias veces al día.',''],
+['Dónde vives','Indica el barrio donde vives',x=>`Bogotá, localidad de ${x.loc}, barrio ${x.barrio}.`,'Pon localidad y barrio aunque pregunten solo uno.','9'],
+['Dónde vives','Barrio y localidad de residencia',x=>`Localidad de ${x.loc}, barrio ${x.barrio}.`,'','9'],
+['Dónde vives','¿En qué parte o zona de Bogotá vives?',x=>`En la localidad de ${x.loc}, barrio ${x.barrio}.`,'Las tiendas prefieren gente que viva cerca: llega puntual y no renuncia por el trayecto.','9'],
+['Dónde vives','Las tiendas están en otra zona de la ciudad, ¿tienes inconveniente?',x=>`No tengo inconveniente. Desde ${x.barrio} llego en unos ${x.min} minutos en transporte público.`,'Revisa en Google Maps cuánto te demoras antes de responder.','9'],
+['Dónde vives','¿Te queda fácil el desplazamiento hasta el punto de venta?',x=>`Sí, me queda bien: son unos ${x.min} minutos en transporte público.`,'','9'],
+['Dónde vives','¿Cuentas con medio de transporte?',x=>'Me desplazo en transporte público (TransMilenio y SITP) sin dificultad.',''],
+['Estudio y horario','¿Estás estudiando actualmente? Indica carrera y horarios',x=>x.est?`Sí, estudio ${x.carrera}, presencial, de lunes a viernes de ${x.hIni} a ${x.hFin}. Tengo disponibilidad en las tardes y los fines de semana, y tiempo completo en vacaciones desde ${x.vac}.`:'No estoy estudiando en este momento. Tengo disponibilidad completa e inmediata.','No escribas «puedo a veces». Escribe días y horas exactas.','2'],
+['Estudio y horario','¿Cuál es tu disponibilidad de horario?',x=>x.est?`Estudio de lunes a viernes de ${x.hIni} a ${x.hFin}. Disponible tardes, fines de semana y festivos; tiempo completo en vacaciones desde ${x.vac}.`:'Tengo disponibilidad de tiempo completo, incluidos fines de semana y festivos.','Al reclutador le sirve saber exactamente cuándo contar contigo.','2'],
+['Estudio y horario','¿Tus clases terminan a las 2 p. m.? ¿Desde qué hora puedes?',x=>x.est?`Termino clases a las ${x.hFin} y puedo estar disponible una hora después.`:'No tengo clases: puedo desde la hora que indiquen.','','2'],
+['Estudio y horario','¿Para qué fecha terminas tus estudios?',x=>x.est?`Mi carrera de ${x.carrera} sigue en curso; mis vacaciones empiezan ${x.vac}, cuando tengo disponibilidad completa.`:'Ya terminé mis estudios y tengo disponibilidad completa.',''],
+['Estudio y horario','¿Por qué quieres trabajar fines de semana y no tiempo completo?',x=>x.est?'Porque entre semana estudio y quiero cumplir con ambas cosas. Los fines de semana y festivos puedo dar el 100 %.':'Puedo trabajar tiempo completo; si el cargo es de fines de semana, también me sirve.','Si el trabajo es de fines de semana, es una ventaja, no un problema.','2'],
+['Estudio y horario','Elige el horario que más se ajuste (medio tiempo, tiempo completo o fin de semana)',x=>x.est?'Fin de semana (o medio tiempo en las tardes).':'Tiempo completo.','Escoge el que de verdad puedas cumplir.'],
+['Disponibilidad','¿Tienes disponibilidad de domingo a domingo con un día de descanso?',x=>x.est?'En vacaciones, sí: domingo a domingo con un día compensatorio. Antes, en las tardes y los fines de semana.':'Sí, tengo disponibilidad de domingo a domingo con un día compensatorio.','Significa trabajar cualquier día, incluidos domingos, y descansar uno entre semana.','10'],
+['Disponibilidad','¿Cuentas con disponibilidad inmediata?',x=>'Sí, tengo disponibilidad inmediata para entrevista y para empezar.',''],
+['Disponibilidad','¿Puedes trabajar turnos rotativos de apertura y cierre?',x=>'Sí, puedo trabajar turnos de apertura y de cierre.',''],
+['Disponibilidad','¿Estás de acuerdo con que la vacante es temporal?',x=>'Sí, busco precisamente un empleo de temporada y me interesa continuar si hay oportunidad.',''],
+['Disponibilidad','El contrato es por la temporada y según desempeño puedes continuar, ¿lo tienes claro?',x=>'Sí, lo tengo claro y estoy de acuerdo.',''],
+['Disponibilidad','¿Tienes disponibilidad para entrevista virtual hoy?',x=>x.est?`Hoy estoy en clase hasta las ${x.hFin}; puedo conectarme después o mañana a la hora que indiquen.`:'Sí, puedo conectarme a la hora que indiquen.','Nunca un «no» a secas: da una alternativa.'],
+['Disponibilidad','¿Puedes trabajar festivos y fechas como el 24 y el 31 de diciembre?',x=>'Sí, tengo disponibilidad en festivos y en las fechas de temporada.','Recuerda que el festivo y el domingo tienen recargo del 90 % desde julio de 2026.','10'],
+['Experiencia','¿Cuánto tiempo de experiencia tienes? (incluye sin experiencia)',x=>x.exp?`${x.meses} meses de experiencia informal en ${x.f1} y ${x.f2}.`:'Sin experiencia formal, pero tengo facilidad para hablar con las personas y muchas ganas de aprender.','Nunca escribas solo «sin experiencia». Negocio familiar, catálogo o restaurante también cuentan.','1'],
+['Experiencia','¿Cuentas con experiencia? Describe brevemente',x=>x.exp?`Sí. Unos ${x.meses} meses como ${x.cargo} en ${x.lugar}: ${x.f1}, ${x.f2} y atención en horas pico.`:'No tengo experiencia laboral formal. He ayudado en ventas de mi familia y aprendo rápido.','Fórmula: dónde + cuánto + 3 funciones con verbos.','1'],
+['Experiencia','¿Cuentas con mínimo 6 meses de experiencia certificada?',x=>x.exp?'No certificada; tengo experiencia informal. (Elige «No» si es de opciones.)':'No.','Contesta que no si no los tienes. Mentir es lo que más descarta en la verificación.','6'],
+['Experiencia','¿Has manejado caja? ¿Por cuánto tiempo?',x=>x.exp?`Sí, ${x.meses} meses en ${x.lugar}: cobro en efectivo y datáfono, y cierres de caja.`:'No he manejado caja formalmente, pero manejo bien las cuentas y aprendo rápido.',''],
+['Experiencia','¿Has tenido que cumplir metas comerciales?',x=>x.exp?`Sí, en ${x.lugar} teníamos metas de atención y de ventas adicionales.`:'No formalmente, pero me motivan las metas y los retos.',''],
+['Experiencia','¿Qué tipo de productos has vendido?',x=>x.exp?`En ${x.lugar}: los productos del negocio, atendiendo y recomendando a los clientes.`:'He vendido por mi cuenta y en el negocio de mi familia.',''],
+['Experiencia','¿Cuál fue tu último cargo?',x=>x.exp?`${cap(x.cargo)} en ${x.lugar}.`:'Aún no he tenido un cargo formal; este sería mi primer empleo.',''],
+['Experiencia','Cuéntanos tu experiencia más reciente (nombre, tiempo y funciones)',x=>x.exp?`En ${x.lugar} durante ${x.meses} meses: ${x.f1}, ${x.f2} y orden del punto de venta.`:'Ayudé en ventas de mi familia: atendía clientes, cobraba y organizaba los productos.',''],
+['Experiencia','¿Tienes experiencia en bodega e inventario?',x=>x.exp?`Sí, en ${x.lugar} recibía productos, surtía, revisaba fechas de vencimiento y organizaba la bodega.`:'No formalmente, pero soy ordenado y aprendo rápido.',''],
+['Experiencia','¿Tienes experiencia en atención al cliente?',x=>x.exp?`Sí, ${x.meses} meses atendiendo clientes en ${x.lugar}.`:'No laboral, pero me gusta atender personas y tengo buena actitud.',''],
+['Experiencia','¿Tienes experiencia en ventas telefónicas o call center?',x=>'No.','Esas preguntas son de otro perfil: no pasa nada por decir que no.'],
+['Experiencia','¿Manejas Excel o tablas dinámicas?',x=>'Manejo Excel básico (tablas y sumas). Tablas dinámicas no.','Di la verdad: si te ponen una prueba, se nota.'],
+['Estudios','¿Cuál es tu último nivel educativo?',x=>x.est?'Estudiante (técnico, tecnólogo o profesional).':'Bachiller (11.° culminado).',''],
+['Estudios','¿Eres bachiller titulado?',x=>x.est?`Sí, soy bachiller. Actualmente estudio ${x.carrera}.`:'Sí, soy bachiller.',''],
+['Estudios','¿Qué estás estudiando?',x=>x.est?`${cap(x.carrera)}, presencial, de lunes a viernes de ${x.hIni} a ${x.hFin}.`:'No estoy estudiando en este momento.',''],
+['Motivación','¿Qué es lo que más te gusta de trabajar en ventas?',x=>'Me gusta hablar con las personas y me motivan los retos y alcanzar metas.','Evita «me interesan principalmente las comisiones».'],
+['Motivación','¿Te apasionan las ventas?',x=>'Sí. Me gusta atender personas y ayudarlas a encontrar lo que buscan.',''],
+['Motivación','¿La oferta se ajusta a lo que buscas?',x=>`Sí: es de temporada, en un horario que puedo cumplir y como ${x.busco}, que es lo que quiero.`,''],
+['Motivación','¿Por qué quieres trabajar con nosotros?',x=>`Porque me gusta atender personas y quiero aprender en una empresa reconocida. El cargo de ${x.busco} encaja con lo que sé hacer.`,''],
+['Motivación','¿Por qué deberíamos elegirte?',x=>x.exp?`Porque ya tengo ${x.meses} meses de experiencia en ${x.f1}, soy puntual y tengo la disponibilidad que necesitan.`:'Porque soy responsable, aprendo rápido y tengo la disponibilidad que necesitan para la temporada.',''],
+['Motivación','Describe tu personalidad en una frase',x=>'Soy amable, puntual y me gusta trabajar en equipo.',''],
+['Salario','¿Cuál es tu aspiración salarial?',x=>'Lo establecido para el cargo. Entiendo que es salario base más comisiones.','En temporada casi siempre es el mínimo + comisiones + auxilio de transporte. Pedir mucho más te descarta.','12'],
+['Salario','¿Estás de acuerdo con el salario ofrecido?',x=>'Sí, estoy de acuerdo con el salario ofrecido.','','12'],
+['Salario','¿Aceptas pago por quincena?',x=>'Sí.','',''],
+['Datos y dotación','Para la dotación: estatura, talla de camiseta, pantalón y calzado',x=>`Estatura ${x.alt||'[estatura]'}; camiseta ${x.cam||'[talla]'}; pantalón ${x.pan||'[talla]'}; calzado ${x.cal||'[talla]'}.`,''],
+['Datos y dotación','¿Autorizas el tratamiento de datos personales (Ley 1581 de 2012)?',x=>'Sí, autorizo.','Es normal en Colombia. Acepta si confías en la empresa.'],
+['Datos y dotación','Número de cédula y fecha de expedición',x=>'(Escribe tu número solo si la empresa es conocida y la oferta es seria).','Nunca des datos bancarios ni pagues nada.','4'],
+['Datos y dotación','¿Tienes alguna discapacidad?',x=>'No. (O la que aplique: es para programas de empleo incluyente y no descalifica).',''],
+['Datos y dotación','¿Has trabajado antes en esta empresa?',x=>'No.','Si sí trabajaste ahí, dilo: a veces es un plus.'],
+['Datos y dotación','¿Tienes antecedentes judiciales?',x=>'No.',''],
+['Datos y dotación','¿Tienes hijos o personas a cargo?',x=>'No. (O responde lo que aplique: es informativo).',''],
+['Entrevista','Háblame de ti',x=>hablame(x),'30 segundos: quién eres, qué has hecho y por qué estás ahí.','7'],
+['Entrevista','¿Qué harías con un cliente molesto?',x=>'Lo escucho sin interrumpir, me disculpo por el inconveniente, busco una solución y, si no está en mis manos, llamo a mi líder.','Si tienes un ejemplo real, cuéntalo.','15'],
+['Entrevista','¿Cuál es tu mayor debilidad?',x=>'A veces me cuesta decir que no y me cargo de cosas; estoy aprendiendo a organizar mejor mi tiempo con una lista diaria.','Una debilidad real con lo que haces para mejorarla.'],
+['Entrevista','¿Dónde te ves en un año?',x=>`Aprendiendo y creciendo en la empresa; si hay oportunidad, quedarme después de la temporada.`,''],
+['Entrevista','¿Tienes alguna pregunta para nosotros?',x=>'Sí: ¿cuándo sabría la respuesta del proceso? ¿Y cómo es un día normal en el cargo?','Siempre pregunta la fecha de respuesta.','19'],
+['Entrevista','No entendí la pregunta',x=>'Disculpe, ¿me la puede repetir?','No adivines: pedir que repitan no quita puntos.','14'],
+['Entrevista','Véndeme este esfero',x=>'¿Para qué lo usarías? ¿Firmas mucho? … Este no se seca y te cabe en el bolsillo. ¿Te lo empaco?','Pregunta, conecta y cierra.','5'],
+['Seguimiento','Mensaje si no te llaman después de la entrevista',x=>seg(x),'Mándalo una sola vez, a los 5 días hábiles.','19'],
+['Seguimiento','Confirmar la cita a entrevista por escrito',x=>`Hola, soy ${x.nombre}. Confirmo mi asistencia a la entrevista. ¡Gracias por la oportunidad!`,'Responde en menos de 2 horas: si no, llaman al siguiente.','3'],
+['Seguimiento','No puedo ir a la hora de la entrevista',x=>`Hola, soy ${x.nombre}. Me interesa mucho el proceso, pero a esa hora estoy en clase. ¿Sería posible otro horario? Puedo desde las ${x.hFin}.`,'Nunca dejes de ir sin avisar.'],
+];
+const CATS=['Todas',...new Set(P.map(p=>p[0]))];
+const cap=s=>s.charAt(0).toUpperCase()+s.slice(1);
+function hablame(x){return x.exp?`Me llamo ${x.nombre}${x.est?`, estudio ${x.carrera}`:''} y vivo en ${x.loc}. Trabajé ${x.meses} meses como ${x.cargo} en ${x.lugar}, donde hacía ${x.f1} y ${x.f2}. Quiero esta temporada porque me gusta atender gente y aprender.`:`Me llamo ${x.nombre}${x.est?`, estudio ${x.carrera}`:''} y vivo en ${x.loc}. Aún no he trabajado formalmente, pero he ayudado en ventas de mi familia. Quiero esta temporada porque me gusta atender gente y aprendo rápido.`}
+function seg(x){return `Hola, soy ${x.nombre}. Me entrevisté ${$('#dia').value||'el lunes'} para ${$('#cargoSeg').value||x.busco}. Sigo muy interesado. ¡Gracias!`}
+$('#chipN').textContent='+'+(P.length)+' respuestas';
+
+let cat='Todas', todo=false;
+const cats=$('#cats');
+CATS.forEach(c=>{const b=document.createElement('button');b.type='button';b.textContent=c;b.setAttribute('role','tab');b.onclick=()=>{cat=c;pintar()};cats.appendChild(b)});
+function norm(s){return s.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase()}
+function pintar(){
+  const x=d(), q=norm($('#q').value.trim());
+  $$('#cats button').forEach(b=>b.classList.toggle('on',b.textContent===cat));
+  let items=P.map((p,i)=>({p,i,r:p[2](x)})).filter(o=>(cat==='Todas'||o.p[0]===cat)&&(!q||norm(o.p[1]+' '+o.r+' '+o.p[0]).includes(q)));
+  const corto=cat==='Todas'&&!q&&!todo&&items.length>8, total=items.length;
+  if(corto)items=items.slice(0,8);
+  const html=items
+   .map(o=>`<article class="preg"><div class="p">${esc(o.p[1])}</div><div class="r" id="r${o.i}">${esc(o.r)}</div>${o.p[3]?`<div class="t">💡 ${esc(o.p[3])}</div>`:''}<div class="pie"><span class="cnt">${esc(o.p[0])}${o.p[4]?' · <a href="https://www.tiktok.com/@tellaman.co" target="_blank" rel="noopener">ver video</a>':''}</span><button class="copiar" data-copy="r${o.i}">Copiar</button></div></article>`).join('');
+  $('#lista').innerHTML=(html||'<div class="vacio">No encontré esa pregunta. Prueba con otra palabra.</div>')+(corto?`<button class="btn s" id="verTodo" type="button" style="width:100%;justify-content:center">Ver las ${total} preguntas</button>`:'');
+  const vt=$('#verTodo'); if(vt) vt.onclick=()=>{todo=true;pintar()};
+  $('#hablame').textContent=hablame(x);
+  $('#seg1').textContent=seg(x);
 }
-function copiar(t,b,it){
-  const listo=()=>{it.classList.remove('copiada');void it.offsetWidth;it.classList.add('copiada');b.textContent='Copiada';
-    clearTimeout(it._t);it._t=setTimeout(()=>{it.classList.remove('copiada');b.textContent='Copiar respuesta'},2200)};
-  const fallback=()=>{const r=document.createRange();r.selectNodeContents(it.querySelector('.txt'));const s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Texto seleccionado: cópialo con el menú'};
-  try{navigator.clipboard.writeText(t).then(listo,fallback)}catch(e){fallback()}
-}
-const campos=()=>[...document.querySelectorAll('#f input,#f select')];
-const estado=()=>campos().map(c=>c.type==='radio'||c.type==='checkbox'?c.checked:c.value);
-function aplicar(s){campos().forEach((c,i)=>{if(s[i]===undefined)return;if(c.type==='radio'||c.type==='checkbox')c.checked=s[i];else c.value=s[i]})}
-function guardar(){try{localStorage.setItem(KEY,JSON.stringify(estado()))}catch(e){}}
-function cargar(){try{const s=JSON.parse(localStorage.getItem(KEY)||'null');if(s)aplicar(s)}catch(e){}}
-const ejemplo=estado();
-$('reset').addEventListener('click',()=>{aplicar(ejemplo);render()});
-$('f').addEventListener('input',render);
-$('f').addEventListener('change',render);
-$('f').addEventListener('submit',e=>e.preventDefault());
-cargar();render();
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+/* copiar */
+const toast=$('#toast');let tt;
+document.addEventListener('click',e=>{const b=e.target.closest('[data-copy]');if(!b)return;const el=document.getElementById(b.dataset.copy);const txt=el.innerText.trim();
+  const ok=()=>{b.classList.add('ok');const t=b.textContent;b.textContent='Copiado ✓';toast.classList.add('ver');clearTimeout(tt);tt=setTimeout(()=>{toast.classList.remove('ver');b.classList.remove('ok');b.textContent=t},1400)};
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(ok,()=>sel(el,ok))}else sel(el,ok)});
+function sel(el,ok){const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand('copy');ok()}catch(e){}}
+
+/* reloj 30 s */
+let rel=null;
+$('#btnReloj').onclick=()=>{if(rel){clearInterval(rel);rel=null;fin();return}let t=30;$('#btnReloj').textContent='Detener';const tick=()=>{$('#seg').textContent=t;$('#arco').style.strokeDashoffset=226.2*(1-t/30);if(t--<=0){fin()}};tick();rel=setInterval(tick,1000)};
+function fin(){clearInterval(rel);rel=null;$('#btnReloj').textContent='Practicar otra vez';$('#seg').textContent='30';$('#arco').style.strokeDashoffset=0}
+
+/* tabla de postulaciones */
+const ESTADOS=['Enviada','Me llamaron','Entrevista','Contratado','No seleccionado'];
+function pintarTabla(){const tb=$('#tb');tb.innerHTML=tabla.map((r,i)=>`<tr><td>${esc(r.e)}</td><td>${esc(r.c)}</td><td>${esc(r.f)}</td><td><select data-i="${i}" aria-label="Estado">${ESTADOS.map(s=>`<option${s===r.s?' selected':''}>${s}</option>`).join('')}</select></td><td><button class="x" data-del="${i}" aria-label="Borrar">×</button></td></tr>`).join('')||'<tr><td colspan="5" class="cnt">Aún no hay postulaciones. Agrega la primera.</td></tr>';
+  $('#tbCnt').textContent=tabla.length?`${tabla.length} postulaciones · meta: 30`:'Meta: 30 en una tarde.'}
+$('#addForm').addEventListener('submit',e=>{e.preventDefault();const em=$('#nEmp').value.trim(),ca=$('#nCar').value.trim();if(!em)return;const h=new Date();tabla.unshift({e:em,c:ca,f:h.getDate()+'/'+(h.getMonth()+1),s:'Enviada'});$('#nEmp').value='';$('#nCar').value='';pintarTabla();guardar();$('#nEmp').focus()});
+$('#tb').addEventListener('change',e=>{const s=e.target.closest('select');if(s){tabla[s.dataset.i].s=s.value;guardar()}});
+$('#tb').addEventListener('click',e=>{const b=e.target.closest('[data-del]');if(b){tabla.splice(b.dataset.del,1);pintarTabla();guardar()}});
+
+/* checklist */
+function prog(){const c=$$('#chk input');$('#prog').style.width=(c.filter(i=>i.checked).length/c.length*100)+'%'}
+$$('#chk input,#revisa input').forEach(i=>i.addEventListener('change',()=>{prog();guardar()}));
+
+/* recargos */
+function rec(){const sal=+$('#sal').value||0,h=sal/210,dom=(+$('#hDom').value||0)*h*0.9,noc=(+$('#hNoc').value||0)*h*0.35;const f=n=>'$'+Math.round(n).toLocaleString('es-CO');$('#totRec').textContent=f(dom+noc);$('#detRec').textContent=`Hora ordinaria ${f(h)} · dominical ${f(dom)} · nocturno ${f(noc)}`}
+['hDom','hNoc','sal'].forEach(k=>$('#'+k).addEventListener('input',rec));
+
+/* eventos */
+document.addEventListener('input',e=>{if(e.target.closest('.panel')||['dia','cargoSeg'].includes(e.target.id)){pintar();guardar()}});
+$('#q').addEventListener('input',pintar);
+document.addEventListener('change',e=>{if(e.target.name==='exp'||e.target.name==='est'){pintar();guardar()}});
+
+/* nav activa */
+const links=$$('.nav a');const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting)links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+en.target.id))}),{rootMargin:'-40% 0px -55% 0px'});
+$$('section[id]').forEach(s=>io.observe(s));
+
+pintar();pintarTabla();prog();rec();
+})();
 </script>
 </body>
 </html>
