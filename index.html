@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Respuestas listas para copiar en las preguntas de selección de Computrabajo y otros portales. Gratis, de Te Llaman.">
+<meta property="og:title" content="¿Qué contesto? · Te Llaman">
+<meta property="og:description" content="Respuestas listas para copiar en tus postulaciones de empleo. Gratis.">
+<style>body{margin:0}</style>
+</head>
+<body>
+<title>¿Qué contesto?</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500;62..125,800&family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+<style>
+/* Concepto: un formulario de selección impreso. A la izquierda llenas tus datos (fijo en escritorio);
+   a la derecha, cada pregunta es una línea del formulario con su respuesta en un campo.
+   Lo único llamativo: el sello morado de notaría que se estampa al copiar. Todo alineado a la izquierda. */
+:root{
+  --paper:#f5f7fa;      /* papel de formulario */
+  --sheet:#ffffff;      /* hoja */
+  --ink:#16264a;        /* tinta azul de impresión */
+  --ink-soft:#56627c;   /* texto secundario */
+  --rule:#d5dbe6;       /* líneas del formulario */
+  --field:#eef2f8;      /* fondo de campo */
+  --stamp:#5b3fc0;      /* sello morado de notaría */
+  --warn:#a3361f;       /* aviso */
+  --cta-bg:#16264a; --cta-ink:#f5f7fa; --cta-hi:#c9bdf5;
+  --display:"Archivo","Arial Narrow",ui-sans-serif,system-ui,sans-serif;
+  --body:"Atkinson Hyperlegible",ui-sans-serif,system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#0f1626; --sheet:#151e33; --ink:#e4e9f4; --ink-soft:#9aa6c0; --rule:#2a3550; --field:#1c2740;
+  --stamp:#a48cff; --warn:#f0896b; --cta-bg:#e4e9f4; --cta-ink:#0f1626; --cta-hi:#5b3fc0; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#0f1626; --sheet:#151e33; --ink:#e4e9f4; --ink-soft:#9aa6c0; --rule:#2a3550; --field:#1c2740;
+  --stamp:#a48cff; --warn:#f0896b; --cta-bg:#e4e9f4; --cta-ink:#0f1626; --cta-hi:#5b3fc0; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font:16px/1.55 var(--body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:32px 56px}
+.page{max-width:1080px;margin:0 auto;display:grid;gap:40px}
+header{display:grid;gap:12px;max-width:44rem}
+h1{font:800 clamp(44px,11vw,88px)/.92 var(--display);font-stretch:68%;letter-spacing:-.01em;margin:0;text-wrap:balance}
+.lead{margin:0;color:var(--ink-soft);font-size:17px;max-width:38rem}
+.privacy{margin:0;font-size:14px;color:var(--ink-soft)}
+.layout{display:grid;gap:32px;align-items:start}
+@media (min-width:880px){.layout{grid-template-columns:minmax(0,380px) minmax(0,1fr);gap:48px}
+  .datos{position:sticky;top:calc(env(safe-area-inset-top,0px) + 16px);max-height:calc(100vh - 32px);overflow:auto}}
+h2{font:800 26px/1.1 var(--display);font-stretch:75%;margin:0}
+h3{font:700 15px/1.3 var(--body);margin:0;color:var(--ink-soft)}
+/* Hoja de datos */
+.datos{background:var(--sheet);border:1px solid var(--rule);border-radius:6px;padding:22px;display:grid;gap:18px;min-width:0}
+.datos p{margin:0}
+.fila{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:420px){.fila{grid-template-columns:1fr}}
+label{display:grid;gap:5px;font-size:14px;font-weight:700;min-width:0}
+.hint{font-weight:400;color:var(--ink-soft);font-size:13px}
+input[type=text],input[type=number],input[type=email],input[type=tel],select{
+  font:inherit;font-size:15px;color:var(--ink);background:var(--field);border:0;border-bottom:2px solid var(--rule);
+  border-radius:3px 3px 0 0;padding:9px 10px;width:100%}
+input:focus,select:focus{outline:none;border-bottom-color:var(--stamp)}
+:focus-visible{outline:3px solid var(--stamp);outline-offset:2px}
+fieldset{border:0;padding:0;margin:0;display:grid;gap:8px;min-width:0}
+legend{font-size:14px;font-weight:700;padding:0;margin-bottom:8px}
+.opciones{display:flex;flex-wrap:wrap;gap:8px}
+.opciones label{display:flex;align-items:center;gap:8px;font-weight:400;font-size:15px;border:1px solid var(--rule);
+  border-radius:3px;padding:7px 12px;cursor:pointer;background:var(--sheet)}
+.opciones input{accent-color:var(--stamp);margin:0}
+.opciones label:has(input:checked){border-color:var(--stamp);color:var(--stamp);font-weight:700}
+.linea{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.nota{font-size:13px;color:var(--ink-soft)}
+button{font:700 15px var(--body);border-radius:3px;padding:9px 14px;cursor:pointer}
+.btn-copiar{background:var(--ink);color:var(--paper);border:0}
+.btn-sec{background:transparent;color:var(--ink);border:1px solid var(--rule)}
+/* Formulario de respuestas */
+.respuestas{display:grid;gap:36px;min-width:0}
+.grupo{display:grid;gap:0}
+.grupo h2{padding-bottom:10px;border-bottom:2px solid var(--ink)}
+.item{display:grid;gap:8px;padding:18px 0;border-bottom:1px solid var(--rule)}
+.pregunta{font-size:15px;color:var(--ink-soft);margin:0}
+.campo{position:relative;background:var(--field);border-radius:3px;padding:12px 14px;font-size:16px;
+  white-space:pre-wrap;word-break:break-word;min-width:0}
+.aviso{margin:0;font-size:14px;color:var(--warn)}
+.aviso strong{font-weight:700}
+.acciones{display:flex;justify-content:flex-end}
+/* El sello */
+.sello{position:absolute;right:10px;top:50%;transform:translateY(-50%) rotate(-9deg);pointer-events:none;
+  font:800 15px/1 var(--display);font-stretch:80%;letter-spacing:.04em;color:var(--stamp);
+  border:2.5px solid var(--stamp);border-radius:5px;padding:6px 10px;background:color-mix(in srgb,var(--field) 70%,transparent);
+  opacity:0}
+.item.copiada .sello{opacity:.92}
+@media (prefers-reduced-motion:no-preference){
+  .item.copiada .sello{animation:estampar .32s cubic-bezier(.2,1.6,.4,1) both}
+  @keyframes estampar{from{opacity:0;transform:translateY(-50%) rotate(-9deg) scale(1.9)}to{opacity:.92;transform:translateY(-50%) rotate(-9deg) scale(1)}}}
+/* Kit */
+.kit{background:var(--cta-bg);color:var(--cta-ink);border-radius:6px;padding:28px;display:grid;gap:14px;max-width:44rem}
+.kit h2{font-size:30px}
+.kit p{margin:0}
+.kit ul{margin:0;padding-left:20px;display:grid;gap:4px}
+.precio{font:800 34px/1 var(--display);font-stretch:75%;color:var(--cta-hi)}
+footer{font-size:13px;color:var(--ink-soft)}
+</style>
+
+<div class="page">
+  <header>
+    <h1>¿Qué contesto?</h1>
+    <p class="lead">Llena tus datos una vez y copia las respuestas a las preguntas de selección que más salen en Computrabajo, elempleo y Magneto.</p>
+    <p class="privacy">Tus datos se quedan en este celular. La página no los envía a ningún lado.</p>
+  </header>
+
+  <div class="layout">
+    <form class="datos" id="f" autocomplete="on">
+      <h2>Tus datos</h2>
+      <p class="nota">Viene llenado con un ejemplo. Cámbialo por lo tuyo.</p>
+      <fieldset>
+        <legend>Tu experiencia</legend>
+        <div class="opciones">
+          <label><input type="radio" name="perfil" value="A" id="pA"> No he trabajado</label>
+          <label><input type="radio" name="perfil" value="B" id="pB" checked> He trabajado, formal o informal</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>¿Estudias?</legend>
+        <div class="opciones">
+          <label><input type="radio" name="estudia" value="si" id="eSi" checked> Sí</label>
+          <label><input type="radio" name="estudia" value="no" id="eNo"> No</label>
+        </div>
+      </fieldset>
+      <div class="fila">
+        <label>Celular<input type="tel" id="cel" value="3001234567"></label>
+        <label>Correo<input type="email" id="mail" value="nombre.apellido@gmail.com"></label>
+      </div>
+      <div class="fila">
+        <label>Localidad<input type="text" id="loc" value="Kennedy"></label>
+        <label>Barrio<input type="text" id="barrio" value="Castilla"></label>
+      </div>
+      <div class="fila">
+        <label>Minutos hasta el norte<span class="hint">Míralo en Google Maps</span><input type="number" id="min" value="50" min="5" max="180"></label>
+        <label>Estudios<span class="hint">Último nivel</span><select id="nivel"><option value="bach">Bachiller</option><option value="u" selected>Técnico o universidad</option></select></label>
+      </div>
+      <div id="bloqueEstudio" style="display:grid;gap:18px">
+        <div class="fila">
+          <label>Carrera<input type="text" id="carrera" value="Administración de Empresas"></label>
+          <label>Modalidad<select id="modal"><option>presencial</option><option>virtual</option></select></label>
+        </div>
+        <div class="fila">
+          <label>Clases desde<input type="text" id="hIni" value="7:00 a. m."></label>
+          <label>Clases hasta<input type="text" id="hFin" value="2:00 p. m."></label>
+        </div>
+        <label>Vacaciones desde<input type="text" id="vac" value="el 1 de diciembre"></label>
+      </div>
+      <div id="bloqueExp" style="display:grid;gap:18px">
+        <div class="fila">
+          <label>Cargo o actividad<input type="text" id="cargo" value="auxiliar de caja"></label>
+          <label>Meses<input type="number" id="meses" value="8" min="1" max="120"></label>
+        </div>
+        <label>Dónde<input type="text" id="lugar" value="un restaurante de comida rápida"></label>
+        <fieldset id="bloqueFun">
+          <legend>Qué hacías (marca solo lo real)</legend>
+          <div class="opciones">
+            <label><input type="checkbox" value="atención al cliente" checked> Atención al cliente</label>
+            <label><input type="checkbox" value="manejo de caja (efectivo y datáfono)" checked> Caja</label>
+            <label><input type="checkbox" value="toma de pedidos" checked> Pedidos</label>
+            <label><input type="checkbox" value="surtido y exhibición de productos"> Surtido</label>
+            <label><input type="checkbox" value="recibo de mercancía e inventario"> Inventario</label>
+            <label><input type="checkbox" value="ventas y asesoría a clientes"> Ventas</label>
+          </div>
+        </fieldset>
+      </div>
+      <div class="linea">
+        <span class="nota">Las respuestas cambian mientras escribes.</span>
+        <button type="button" class="btn-sec" id="reset">Volver al ejemplo</button>
+      </div>
+    </form>
+
+    <section class="respuestas" id="out" aria-live="polite"></section>
+  </div>
+
+  <section class="kit">
+    <h2>Te Llaman, el kit completo</h2>
+    <p>Para postularte a 30 empleos de temporada en una semana sabiendo qué decir.</p>
+    <ul>
+      <li>Más de 60 preguntas reales de selección con respuestas para tres situaciones</li>
+      <li>Tres plantillas de hoja de vida que leen los filtros automáticos</li>
+      <li>Guía de entrevista de temporada y plan de siete días</li>
+    </ul>
+    <div class="linea"><span class="precio">$19.900</span><span>Disponible pronto en Hotmart</span></div>
+  </section>
+
+  <footer>Te Llaman. Son respuestas modelo: nunca afirmes algo que no tienes.</footer>
+</div>
+
+<script>
+const $=id=>document.getElementById(id);
+const KEY='quecontesto-v2';
+const v=id=>($(id).value||'').trim();
+const perfil=()=>document.querySelector('input[name=perfil]:checked').value;
+const estudia=()=>document.querySelector('input[name=estudia]:checked').value==='si';
+const funciones=()=>[...document.querySelectorAll('#bloqueFun input:checked')].map(i=>i.value);
+const lista=a=>a.length<2?a.join(''):a.slice(0,-1).join(', ')+' y '+a.at(-1);
+
+function grupos(){
+  const E=estudia(),B=perfil()==='B',fun=funciones(),m=+v('meses')||0,min=+v('min')||0;
+  const caja=fun.some(f=>f.startsWith('manejo de caja'));
+  const disp=E?`En noviembre puedo en las tardes (salgo de clase a las ${v('hFin')}) y los fines de semana; desde ${v('vac')}, tiempo completo.`:'Tengo disponibilidad completa e inmediata.';
+  return [
+    ['Contacto',[
+      ['Indica tu número de WhatsApp actualizado',v('cel'),'Ponlo sin espacios y sin el 57 si no lo piden.'],
+      ['Indica únicamente tu correo electrónico actualizado',v('mail'),'Revisa spam y promociones dos veces al día: ahí llegan muchas citaciones.'],
+    ]],
+    ['Dónde vives',[
+      ['¿En qué barrio y localidad vives?',`Bogotá, localidad de ${v('loc')}, barrio ${v('barrio')}.`],
+      ['Las tiendas están en el norte, ¿te queda bien el desplazamiento?',
+        min<=75?`Sí, me queda bien. Llego en unos ${min} minutos en transporte público.`:`Llego en unos ${min} minutos en transporte público y puedo cumplir el horario.`,
+        min>90?'Más de 90 minutos de trayecto: piénsalo, los turnos de cierre terminan tarde.':''],
+      ['¿Cuenta con medio de transporte?','Me desplazo en transporte público (TransMilenio y SITP) sin dificultad.'],
+    ]],
+    ['Estudio y horario',[
+      ['¿Estás estudiando actualmente? Indica carrera y horarios',
+        E?`Sí, ${v('carrera')}, ${v('modal')}, de lunes a viernes de ${v('hIni')} a ${v('hFin')}. ${disp}`:'No estoy estudiando en este momento; tengo disponibilidad completa e inmediata.'],
+      ['¿Eres bachiller? ¿Tienes el certificado?',v('nivel')==='u'&&E?`Sí, soy bachiller. Actualmente estudio ${v('carrera')}.`:'Sí, soy bachiller.'],
+      ...(E?[['¿Por qué fines de semana y no tiempo completo?','Porque entre semana estudio y quiero cumplir con las dos cosas. Los fines de semana y festivos puedo dar el 100 %, y en vacaciones, tiempo completo.']]:[]),
+      ['¿Tienes disponibilidad de domingo a domingo con un día de descanso?',E?`En vacaciones, sí. ${disp}`:'Sí, de domingo a domingo con un día compensatorio.'],
+      ['¿Cuentas con disponibilidad inmediata?','Sí, tengo disponibilidad inmediata para entrevista y para empezar.'],
+    ]],
+    ['Experiencia',[
+      ['¿Cuánto tiempo de experiencia tienes como asesor comercial?',
+        B?`${m} meses de experiencia en atención al cliente como ${v('cargo')} en ${v('lugar')}.`:'Sin experiencia formal, pero tengo facilidad para hablar con las personas y muchas ganas de aprender.'],
+      ['Cuenta con experiencia, describa brevemente',
+        B?`Sí. Unos ${m} meses como ${v('cargo')} en ${v('lugar')}${fun.length?': '+lista(fun)+'.':'.'}`:'No tengo experiencia laboral formal. Aprendo rápido, soy puntual y me gusta atender personas.'],
+      ['¿Has manejado caja? ¿Por cuánto tiempo?',B&&caja?`Sí, ${m} meses en ${v('lugar')}: cobro en efectivo y datáfono.`:'No he manejado caja formalmente, pero manejo bien las cuentas y aprendo rápido.'],
+      ['¿Cuentas con mínimo 6 meses certificados en ventas de ropa o calzado?','No.','Si no los tienes, contesta que no. Mentir aquí es lo que más descarta cuando verifican referencias.'],
+    ]],
+    ['Motivación',[
+      ['¿Qué es lo que más te gusta de trabajar en ventas?','Me gusta hablar con las personas y me motivan los retos y las metas de ventas.'],
+      ['¿La oferta se ajusta a lo que buscas?','Sí: es de temporada, en un horario que puedo cumplir y en atención al cliente, que es lo que busco.'],
+    ]],
+  ];
+}
+
+function render(){
+  $('bloqueEstudio').hidden=!estudia();
+  $('bloqueExp').hidden=perfil()!=='B';
+  const out=$('out'); out.replaceChildren();
+  grupos().forEach(([titulo,items])=>{
+    const g=document.createElement('section'); g.className='grupo';
+    const h=document.createElement('h2'); h.textContent=titulo; g.appendChild(h);
+    items.forEach(([q,a,aviso])=>{
+      const it=document.createElement('div'); it.className='item';
+      it.innerHTML='<p class="pregunta"></p><div class="campo"><span class="txt"></span><span class="sello" aria-hidden="true">Copiada</span></div>'+(aviso?'<p class="aviso"></p>':'')+'<div class="acciones"><button type="button" class="btn-copiar">Copiar respuesta</button></div>';
+      it.querySelector('.pregunta').textContent=q;
+      it.querySelector('.txt').textContent=a;
+      if(aviso) it.querySelector('.aviso').textContent=aviso;
+      const b=it.querySelector('button');
+      b.addEventListener('click',()=>copiar(a,b,it));
+      g.appendChild(it);
+    });
+    out.appendChild(g);
+  });
+  guardar();
+}
+function copiar(t,b,it){
+  const listo=()=>{it.classList.remove('copiada');void it.offsetWidth;it.classList.add('copiada');b.textContent='Copiada';
+    clearTimeout(it._t);it._t=setTimeout(()=>{it.classList.remove('copiada');b.textContent='Copiar respuesta'},2200)};
+  const fallback=()=>{const r=document.createRange();r.selectNodeContents(it.querySelector('.txt'));const s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Texto seleccionado: cópialo con el menú'};
+  try{navigator.clipboard.writeText(t).then(listo,fallback)}catch(e){fallback()}
+}
+const campos=()=>[...document.querySelectorAll('#f input,#f select')];
+const estado=()=>campos().map(c=>c.type==='radio'||c.type==='checkbox'?c.checked:c.value);
+function aplicar(s){campos().forEach((c,i)=>{if(s[i]===undefined)return;if(c.type==='radio'||c.type==='checkbox')c.checked=s[i];else c.value=s[i]})}
+function guardar(){try{localStorage.setItem(KEY,JSON.stringify(estado()))}catch(e){}}
+function cargar(){try{const s=JSON.parse(localStorage.getItem(KEY)||'null');if(s)aplicar(s)}catch(e){}}
+const ejemplo=estado();
+$('reset').addEventListener('click',()=>{aplicar(ejemplo);render()});
+$('f').addEventListener('input',render);
+$('f').addEventListener('change',render);
+$('f').addEventListener('submit',e=>e.preventDefault());
+cargar();render();
+</script>
+</body>
+</html>
